@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f7fe;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  min-height: 80vh;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.box {
+  position: fixed;
+  left: -100%;
+  width: 280px;
+  min-height: 60px;
+  background: white;
+  transition: 0.5s ease;
+  border-left: 2px solid royalblue;
+}
+
+.box.active {
+  left: 30px;
+}
+
+.box .box-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.box .box-content .icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: royalblue;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .box-content .wrapper .title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.box .box-content .wrapper .text {
+  font-weight: 400;
+  font-size: 15px;
+  color: #333;
+}
+
+.box .btn-close {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  color: royalblue;
+}
+
+.box .progress-bar {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: dodgerblue;
+}
+
+.button {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 20px;
+  border: none;
+  background: royalblue;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* for mobile screen */
+@media screen and (max-width: 768px) {
+  
+  .container {
+    width: 90%;
+  }
+  
+  .box {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .box.active {
+    left: 20px;
+  }
+  
+  .button {
+    top: 50%;
+  }
+  
+}
